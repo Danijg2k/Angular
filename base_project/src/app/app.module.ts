@@ -3,14 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmptyComponentComponent } from './components/empty-component/empty-component.component';
 import { HomeComponentComponent } from './pages/home/home-component/home-component.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { HeaderComponent } from './components/header/header.component';
+import { IndexComponentComponent } from './pages/index/index-component/index-component.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmptyComponentComponent,
-    HomeComponentComponent
+    HomeComponentComponent,
+    PageNotFoundComponent,
+    HeaderComponent,
+    IndexComponentComponent,
+    FooterComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
