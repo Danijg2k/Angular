@@ -7,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselComponent implements OnInit {
 
-  constructor() { }
+  model = {
+    left: true,
+    middle: false,
+    right: false
+  };
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

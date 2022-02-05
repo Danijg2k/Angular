@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { IndexComponentComponent } from './pages/index/index-component/index-component.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
