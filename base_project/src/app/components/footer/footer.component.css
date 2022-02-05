@@ -1,7 +1,29 @@
+/* Colors for links */
 #angularLink{
   color:rgb(236, 55, 55)
 }
 
 #bootstrapLink{
   color:rgb(150, 71, 224)
+}
+
+#upLink{
+  color: white;
+  text-decoration: none;
+}
+
+/* 'Going up' link floating right. */
+#up{
+  float: right;
+}
+
+/* Making Angular and Bootstrap links disappear and 'going up' link center. */
+@media only screen and (max-width: 400px) {
+  .links{
+    display:none;
+  }
+  #up{
+    float: none;
+    text-align: center;
+  }
 }
