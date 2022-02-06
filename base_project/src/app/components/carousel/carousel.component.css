@@ -8,10 +8,10 @@ ngb-carousel .sr-only{
 
 #carouselDiv{
   /* Comment general margin (next line) for centering */
-  margin:0;
+  /* margin:0; */
   /* Top and bot margins */
-  /* margin-top: 2rem; */
-  /* margin-bottom: 2rem; */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   /* Padding */
   padding: 0;
   /* Custom width for pc */
