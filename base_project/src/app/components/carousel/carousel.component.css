@@ -1,0 +1,33 @@
+*{
+  box-sizing: border-box;
+}
+
+ngb-carousel .sr-only{
+  display: none;
+}
+
+#carouselDiv{
+  /* Comment general margin (next line) for centering */
+  margin:0;
+  /* Top and bot margins */
+  /* margin-top: 2rem; */
+  /* margin-bottom: 2rem; */
+  /* Padding */
+  padding: 0;
+  /* Custom width for pc */
+  width: 30vw;
+}
+
+
+img{
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  #carouselDiv{
+    /* Custom width for mobile */
+    width: 100vw;
+    /* Remove margins */
+    margin: 0;
+  }
+}

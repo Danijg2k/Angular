@@ -1,15 +1,30 @@
-/* Colors for links */
+/* Colors and styles for links */
 #angularLink{
-  color:rgb(236, 55, 55)
+  color:rgb(236, 55, 55);
+  text-decoration: none;
+}
+
+#angularLink:hover{
+  text-decoration: underline;
 }
 
 #bootstrapLink{
-  color:rgb(150, 71, 224)
+  color:rgb(150, 71, 224);
+  text-decoration: none;
+}
+
+#bootstrapLink:hover{
+  text-decoration: underline;
 }
 
 #upLink{
   color: white;
   text-decoration: none;
+}
+
+#upLink:hover{
+  font-style: italic;
+  color:rgb(150, 71, 224);
 }
 
 /* 'Going up' link floating right. */
