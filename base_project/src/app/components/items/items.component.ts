@@ -50,16 +50,16 @@ export class ItemsComponent implements OnInit {
     this.furCoat = ["pinkFurCoat","whiteFurCoat"].map((n) => `/assets/images/items/fur-hearts-coat/${n}.jpg`);
     this.actual4 = this.furCoat[0]
     // #5 Crop top
-    this.cropTop = ["blueHeartTop","limeHeartTop","pinkHeartTop"].map((n) => `/assets/images/items/heart-top/${n}.jpg`);
+    this.cropTop = ["blackCropTop","limeCropTop","pinkCropTop"].map((n) => `/assets/images/items/crop-top/${n}.jpg`);
     this.actual5 = this.cropTop[0]
     // #6 Leather top
-    this.leatherTop = ["blueHeartTop","limeHeartTop","pinkHeartTop"].map((n) => `/assets/images/items/heart-top/${n}.jpg`);
+    this.leatherTop = ["pinkLeatherTop","purpleLeatherTop","blueLeatherTop"].map((n) => `/assets/images/items/leather-top/${n}.jpg`);
     this.actual6 = this.leatherTop[0]
     // #7 Bicolor sweatshirt
-    this.bicolor = ["blueHeartTop","limeHeartTop","pinkHeartTop"].map((n) => `/assets/images/items/heart-top/${n}.jpg`);
+    this.bicolor = ["whiteBicolorSweatshirt","pinkBicolorSweatshirt","blueBicolorSweatshirt"].map((n) => `/assets/images/items/bicolor-sweatshirt/${n}.jpg`);
     this.actual7 = this.bicolor[0]
     // #8 Neoprene muscles
-    this.neoprene = ["blueHeartTop","limeHeartTop","pinkHeartTop"].map((n) => `/assets/images/items/heart-top/${n}.jpg`);
+    this.neoprene = ["tulleMuscles","greenMuscles"].map((n) => `/assets/images/items/neoprene-body/${n}.jpg`);
     this.actual8 = this.neoprene[0]
   }
 
@@ -78,8 +78,25 @@ export class ItemsComponent implements OnInit {
     this.actual3 = this.heartDress[num]
   }
 
+
   coat(num:number){
     this.actual4 = this.furCoat[num]
+  }
+
+  crop(num:number){
+    this.actual5 = this.cropTop[num]
+  }
+
+  leather(num:number){
+    this.actual6 = this.leatherTop[num]
+  }
+
+  sweat(num:number){
+    this.actual7 = this.bicolor[num]
+  }
+
+  neop(num:number){
+    this.actual8 = this.neoprene[num]
   }
 
 }

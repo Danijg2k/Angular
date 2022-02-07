@@ -1,31 +1,70 @@
 /* Custom colors for item buttons */
+
+/* Pink to redish tones */
+.btn-softPink{
+  background-color: #e6b5ae;
+}
+.btn-pearl{
+  background-color: #b48faf;
+}
 .btn-pink{
   background-color: #c46c98;
 }
+.btn-punch{
+  background-color: #e94f6b;
+}
+.btn-magenta{
+  color: white;
+  background-color: #bb176e;
+}
+.btn-crimson{
+  color:white;
+  background-color: #631632;
+}
 
+
+
+/* Green tones */
 .btn-lime{
   background-color: #98e29c;
 }
+.btn-fern{
+  background-color: #798f4b;
+}
+.btn-green{
+  background-color: #667f4f;
+}
+.btn-india{
+  background-color: #4f6b08;
+}
 
+
+
+/* Blue to purple tones */
+.btn-aqua{
+  background-color: #98dde7;
+}
+.btn-silk{
+  color: white;
+  background-color: #2e51a9;
+}
 .btn-blue{
   color: white;
   background-color: #373860;
 }
-
-.btn-yellow{
-  background-color: #b7a157;
-}
-
 .btn-purple{
   color: white;
   background-color: #453857;
 }
 
+
+
+/* Other */
+.btn-yellow{
+  background-color: #b7a157;
+}
 .btn-tulle{
   color:white;
   background-color: #503428;
 }
 
-.btn-green{
-  background-color: #667f4f;
-}
