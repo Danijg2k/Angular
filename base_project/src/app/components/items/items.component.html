@@ -1,75 +1,75 @@
 <div class="album py-5">
   <div class="container">
-
+    <!-- 1 -->
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-4 g-3">
       <div class="col">
         <div class="card shadow-sm">
-          <img src="/assets/images/items/heart-top/blueHeartTop.jpg" class="itemImage">
+          <img [src]="actual1" class="itemImage">
           <div class="card-body">
             <p class="card-text">LONG SLEEVE FITTED HEART STRIPED TOP WITH LONG SLEEVE</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-dark btn-blue">Blue</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-lime">Lime</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-pink">Pink</button>
+                <button type="button" class="btn btn-sm btn-outline-dark btn-blue" (click)="striped(0)">Blue</button>
+                <button type="button" class="btn btn-sm btn-outline-dark btn-lime" (click)="striped(1)">Lime</button>
+                <button type="button" class="btn btn-sm btn-outline-dark btn-pink" (click)="striped(2)">Pink</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-
+      <!-- 2 -->
       <div class="col">
         <div class="card shadow-sm">
-          <img src="/assets/images/items/pants/pantalonAmarillo.jpg" class="itemImage">
+          <img [src]="actual2" class="itemImage">
           <div class="card-body">
             <p class="card-text">ARCHIVE EXTRA LIFE GREEN SKY HEARTS PANTS</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-dark btn-yellow">Yellow</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-blue">Blue</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-lime">Lime</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-secondary">Black</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-pink">Pink</button>
+                <button type="button" class="btn btn-sm btn-outline-dark btn-yellow" (click)="pants(0)">Yellow</button>
+                <button type="button" class="btn btn-sm btn-outline-dark btn-blue" (click)="pants(1)">Blue</button>
+                <button type="button" class="btn btn-sm btn-outline-dark btn-lime" (click)="pants(2)">Lime</button>
+                <button type="button" class="btn btn-sm btn-outline-dark btn-secondary" (click)="pants(3)">Black</button>
+                <button type="button" class="btn btn-sm btn-outline-dark btn-pink" (click)="pants(4)">Pink</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-
+      <!-- 3 -->
       <div class="col">
         <div class="card shadow-sm">
-          <img src="/assets/images/items/side-heart-dress/limeSideHeart.jpg" class="itemImage">
+          <img [src]="actual3" class="itemImage">
           <div class="card-body">
             <p class="card-text">STRIPED DRESS WITH SIDE HEART DETAIL</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-dark btn-lime">Lime</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-blue">Blue</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-pink">Pink</button>
+                <button type="button" class="btn btn-sm btn-outline-dark btn-lime" (click)="dress(0)">Lime</button>
+                <button type="button" class="btn btn-sm btn-outline-dark btn-blue" (click)="dress(1)">Blue</button>
+                <button type="button" class="btn btn-sm btn-outline-dark btn-pink" (click)="dress(2)">Pink</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-
+      <!-- 4 -->
       <div class="col">
         <div class="card shadow-sm">
-          <img src="/assets/images/items/fur-hearts-coat/pinkFurCoat.jpg" class="itemImage">
+          <img [src]="actual4" class="itemImage">
           <div class="card-body">
             <p class="card-text">OMEGA RECYCLED FUR HEARTS COAT SPECIAL</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-dark btn-pink">Pink</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-white">White</button>
+                <button type="button" class="btn btn-sm btn-outline-dark btn-pink" (click)="coat(0)">Pink</button>
+                <button type="button" class="btn btn-sm btn-outline-dark btn-white" (click)="coat(1)">White</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-
+      <!-- 5 -->
       <div class="col">
         <div class="card shadow-sm">
-          <img src="/assets/images/items/crop-top/blackCropTop.jpg" class="itemImage">
+          <img [src]="actual5" class="itemImage">
           <div class="card-body">
             <p class="card-text">CROP TOP LONG SLEEVE HEART</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -82,10 +82,10 @@
           </div>
         </div>
       </div>
-
+      <!-- 6 -->
       <div class="col">
         <div class="card shadow-sm">
-          <img src="/assets/images/items/leather-top/pinkLeatherTop.jpg" class="itemImage">
+          <img [src]="actual6" class="itemImage">
           <div class="card-body">
             <p class="card-text">LAMINATED LEATHER TOP</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -98,12 +98,10 @@
           </div>
         </div>
       </div>
-
-
-
+      <!-- 7 -->
       <div class="col">
         <div class="card shadow-sm">
-          <img src="/assets/images/items/bicolor-sweatshirt/whiteBicolorSweatshirt.jpg" class="itemImage">
+          <img [src]="actual7" class="itemImage">
           <div class="card-body">
             <p class="card-text">BICOLOR SWEATSHIRT</p>
             <div class="d-flex justify-content-between align-items-center">
@@ -116,12 +114,10 @@
           </div>
         </div>
       </div>
-
-
-
+      <!-- 8 -->
       <div class="col">
         <div class="card shadow-sm">
-          <img src="/assets/images/items/neoprene-body/tulleMuscles.jpg" class="itemImage">
+          <img [src]="actual8" class="itemImage">
           <div class="card-body">
             <p class="card-text">NEOPRENE BODY MUSCLES</p>
             <div class="d-flex justify-content-between align-items-center">
