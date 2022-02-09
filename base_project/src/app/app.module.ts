@@ -9,11 +9,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { IndexComponentComponent } from './pages/index/index-component/index-component.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ItemsComponent } from './components/items/items.component';
 import { AppRoutingModuleComponent } from './components/app-routing-module/app-routing-module.component';
 import { ProductFromUrlComponent } from './components/product-from-url/product-from-url.component';
+import { PadreColoresComponent } from './components/padre-colores/padre-colores.component';
+import { HijoColoresComponent } from './components/hijo-colores/hijo-colores.component';
+import { ColoresComponent } from './pages/colores/colores/colores.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +29,16 @@ import { ProductFromUrlComponent } from './components/product-from-url/product-f
     CarouselComponent,
     ItemsComponent,
     AppRoutingModuleComponent,
-    ProductFromUrlComponent
+    ProductFromUrlComponent,
+    PadreColoresComponent,
+    HijoColoresComponent,
+    ColoresComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     NgbModule
   ],
   providers: [],

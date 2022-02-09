@@ -1,0 +1,10 @@
+<!-- DE PADRE A HIJO (INPUT FILTRAR) -->
+<label for="nombre">Nombre: </label>
+<input type="text" id='nombre' [formControl]='currentName'>
+
+<!-- DE HIJO A PADRE -->
+<input type="text"  id='item-contador' [formControl]='currentItemEmited' [readonly]='true'>
+
+<div style="background-color: darkgray;">
+  <app-hijo-colores [item]="currentName.value" (emitItemEvent)='addLike()'></app-hijo-colores>
+</div>

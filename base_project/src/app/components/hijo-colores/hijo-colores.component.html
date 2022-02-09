@@ -1,0 +1,25 @@
+<p>{{ item }}</p>
+
+<div class="album py-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-4 g-3">
+      <!-- DIV DE PRODUCTO -->
+      <div class="col" *ngFor="let producto of productos">
+        <div *ngIf="producto.nombre?.includes(item)">
+          <div class="card shadow-sm">
+            <img src="{{ producto.url }}" class="itemImage">
+            <div class="card-body">
+              <p class="card-text">{{ producto.nombre }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-dark btn-blue" (click)='emitValue(1)'>+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+    </div>
+  </div>
+</div>
