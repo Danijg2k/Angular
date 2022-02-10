@@ -32,7 +32,7 @@ import { ColoresComponent } from './pages/colores/colores/colores.component';
     ProductFromUrlComponent,
     PadreColoresComponent,
     HijoColoresComponent,
-    ColoresComponent
+    ColoresComponent,
   ],
   imports: [
     BrowserModule,

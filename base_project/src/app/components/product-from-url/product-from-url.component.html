@@ -1,14 +1,23 @@
-<table class="table table-light">
-  <tbody>
-    <tr>
-      <td>Id producto</td>
-      <td>Nombre</td>
-      <td>Url</td>
-    </tr>
-    <tr>
-      <td>{{ producto?.productId }}</td>
-      <td>{{ producto?.nombre }}</td>
-      <td>{{ producto?.url }}</td>
-    </tr>
-  </tbody>
-</table>
+<!-- Botón de volver a productos -->
+<!-- <button class="back">Volver</button> -->
+<!-- Contenedor con el producto y los detalles -->
+<div class="container">
+  <div class="images">
+    <img [src]="actualImage" />
+  </div>
+  <p class="pick">Choose color</p>
+  <div class="colors">
+    <!-- Un botón para cada color de artículo (dinámicamente) -->
+    <button type="button" class="color" (click)="changeImg(color)" *ngFor="let color of producto?.colores">{{ color }}</button>
+  </div>
+  <div class="product">
+    <p>Producto {{ producto?.productId }}</p>
+    <h1>{{ producto?.nombre }}</h1>
+    <h2>{{ producto?.precio }}€</h2>
+    <p class="desc">{{ producto?.descripcion }}</p>
+    <div class="buttons">
+      <button class="add">Add to Cart</button>
+    </div>
+  </div>
+</div>
+

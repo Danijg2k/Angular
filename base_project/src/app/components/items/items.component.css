@@ -68,3 +68,9 @@
   background-color: #503428;
 }
 
+
+
+/* Borders for divs */
+.col{
+  border: 1px black;
+}

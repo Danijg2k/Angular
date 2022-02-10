@@ -1,135 +1,26 @@
-<div class="album py-5">
-  <div class="container">
-    <!-- 1 -->
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-4 g-3">
-      <div class="col">
+<div class="album py-5" >
+  <div class="container" >
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-4 g-3" >
+      <!-- DIV DE PRODUCTO -->
+      <div class="col" *ngFor="let producto of productos">
         <div class="card shadow-sm">
-          <img [src]="actual1" class="itemImage">
+          <img [src]="producto.url" class="itemImage">
           <div class="card-body">
-            <p class="card-text">LONG SLEEVE FITTED HEART STRIPED TOP WITH LONG SLEEVE</p>
+            <p class="card-text">{{ producto.nombre }}</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-dark btn-blue" (click)="striped(0)">Blue</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-fern" (click)="striped(1)">Green</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-crimson" (click)="striped(2)">Crimson</button>
+                <!-- Hacemos que al dar click en botón te abra el producto en la siguiente página -->
+                <button type="button" class="btn btn-sm btn-outline-dark btn-blue" [routerLink]="'/productos/'+producto.productId">Detalles</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- 2 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img [src]="actual2" class="itemImage">
-          <div class="card-body">
-            <p class="card-text">ARCHIVE EXTRA LIFE GREEN SKY HEARTS PANTS</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-dark btn-yellow" (click)="pants(0)">Yellow</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-blue" (click)="pants(1)">Blue</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-lime" (click)="pants(2)">Lime</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-secondary" (click)="pants(3)">Black</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-pearl" (click)="pants(4)">Pink</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 3 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img [src]="actual3" class="itemImage">
-          <div class="card-body">
-            <p class="card-text">STRIPED DRESS WITH SIDE HEART DETAIL</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-dark btn-india" (click)="dress(0)">Green</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-blue" (click)="dress(1)">Blue</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-crimson" (click)="dress(2)">Crimson</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 4 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img [src]="actual4" class="itemImage">
-          <div class="card-body">
-            <p class="card-text">OMEGA RECYCLED FUR HEARTS COAT SPECIAL</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-dark btn-softPink" (click)="coat(0)">Pink</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-white" (click)="coat(1)">White</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 5 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img [src]="actual5" class="itemImage">
-          <div class="card-body">
-            <p class="card-text">CROP TOP LONG SLEEVE HEART</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-dark btn-secondary" (click)="crop(0)">Black</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-lime" (click)="crop(1)">Lime</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-punch" (click)="crop(2)">Pink</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 6 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img [src]="actual6" class="itemImage">
-          <div class="card-body">
-            <p class="card-text">LAMINATED LEATHER TOP</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-dark btn-magenta" (click)="leather(0)">Pink</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-purple" (click)="leather(1)">Purple</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-silk" (click)="leather(2)">Blue</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 7 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img [src]="actual7" class="itemImage">
-          <div class="card-body">
-            <p class="card-text">BICOLOR SWEATSHIRT</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-dark btn-white" (click)="sweat(0)">White</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-softPink" (click)="sweat(1)">Pink</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-aqua" (click)="sweat(2)">Aqua</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 8 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img [src]="actual8" class="itemImage">
-          <div class="card-body">
-            <p class="card-text">NEOPRENE BODY MUSCLES</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-dark btn-tulle" (click)="neop(0)">Tulle</button>
-                <button type="button" class="btn btn-sm btn-outline-dark btn-green" (click)="neop(1)">Green</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <!--  -->
     </div>
   </div>
 </div>
+
+
+
+

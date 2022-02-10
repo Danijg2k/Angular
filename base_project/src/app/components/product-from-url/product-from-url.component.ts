@@ -6,16 +6,18 @@ import { PRODUCTOS } from 'src/app/utils/productos';
 @Component({
   selector: 'app-product-from-url',
   templateUrl: './product-from-url.component.html',
-  styleUrls: ['./product-from-url.component.css']
+  styleUrls: ['./product-from-url.component.scss']
 })
 export class ProductFromUrlComponent implements OnInit {
 
   producto: Product | null;
   idProducto: number;
+  actualImage: string | null;
 
   constructor(private activatedRoute: ActivatedRoute) {
     this.producto = null;
     this.idProducto = 0;
+    this.actualImage = '';
   }
 
   ngOnInit(): void {
@@ -27,6 +29,14 @@ export class ProductFromUrlComponent implements OnInit {
     this.producto = PRODUCTOS.filter(
       (x: Product) => x.productId == this.idProducto
     )[0];
+
+    this.actualImage = this.producto.url;
+  }
+
+  changeImg(color: string){
+    if(this.producto!=null){
+      this.actualImage = '/assets/images/items/product'+this.producto.productId+'/'+color+'.jpg'
+    }
   }
 
 }
