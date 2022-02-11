@@ -2,6 +2,7 @@
   <div class="collapse bg-dark" id="navbarHeader">
     <div class="container">
       <div class="row">
+
         <div class="col-sm-8 col-md-7 py-4">
           <h4 class="text-white">Acerca de</h4>
           <p class="about">A sus 25 años, Domingo Rodríguez Lázaro, fundador y director creativo de Dominnico, puede decir que ha cumplido su sueño, "crear diseños de lujo contemporáneo afines al espectáculo", creaciones que ya lucen Rosalía, Lady Gaga o Rita Ora o Lizzo.</p>
@@ -22,11 +23,16 @@
       <a href="#" class="navbar-brand d-flex align-items-center">
         <strong>Domingo Rodríguez Lázaro</strong>
       </a>
+      <form class="d-flex">
+        <!-- Es necesario ponerle name al input si vamos a utilizar ngModel. Si no lo ponemos no funciona. -->
+        <input class="form-control me-2" type="search" placeholder="Introduce producto" name="input" aria-label="Search" [(ngModel)]="editMessage" (keyup)="changeMessage()">
+      </form>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
   </div>
 </header>
+
 
 

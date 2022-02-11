@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core'
 import { Product } from 'src/app/models/product';
 import { PRODUCTOS } from 'src/app/utils/productos';
+import { HelperServiceComponent } from '../helper-service/helper-service.component';
 
 @Component({
   encapsulation: ViewEncapsulation.None,
@@ -15,11 +16,17 @@ export class ItemsComponent implements OnInit {
 
   productos: Product[];
 
-  constructor() {
+  message: string;
+  editMessage: string;
+
+  constructor(private helper: HelperServiceComponent) {
     this.productos = PRODUCTOS;
+    this.message = ""
+    this.editMessage = ""
   }
 
   ngOnInit(): void {
+    this.helper.customMessage.subscribe(msg => this.message = msg);
   }
 
 

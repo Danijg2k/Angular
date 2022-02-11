@@ -1,21 +1,28 @@
 <div class="album py-5" >
   <div class="container" >
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-4 g-3" >
-      <!-- DIV DE PRODUCTO -->
-      <div class="col" *ngFor="let producto of productos">
-        <div class="card shadow-sm">
-          <img [src]="producto.url" class="itemImage">
-          <div class="card-body">
-            <p class="card-text">{{ producto.nombre }}</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <!-- Hacemos que al dar click en botón te abra el producto en la siguiente página -->
-                <button type="button" class="btn btn-sm btn-outline-dark btn-blue" [routerLink]="'/productos/'+producto.productId">Detalles</button>
+      <!-- DIV DE PRODUCTO -> usamos ng-container porque necesitamos un div que no se muestre si no se cumple el if -->
+      <!-- Si usamos un div normal se generaría uno por cada elemento del for each (ocupando espacio), esto no nos interesa -->
+      <ng-container *ngFor="let producto of productos">
+
+        <div *ngIf="producto.nombre?.includes(message)">
+
+          <div class="card shadow-sm">
+            <img [src]="producto.url" class="itemImage">
+            <div class="card-body">
+              <p class="card-text">{{ producto.nombre }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <!-- Hacemos que al dar click en botón te abra el producto en la siguiente página -->
+                  <button type="button" class="btn btn-sm btn-outline-dark btn-blue" [routerLink]="'/productos/'+producto.productId">Detalles</button>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
-      </div>
+
+      </ng-container>
       <!--  -->
     </div>
   </div>

@@ -17,6 +17,7 @@ import { ProductFromUrlComponent } from './components/product-from-url/product-f
 import { PadreColoresComponent } from './components/padre-colores/padre-colores.component';
 import { HijoColoresComponent } from './components/hijo-colores/hijo-colores.component';
 import { ColoresComponent } from './pages/colores/colores/colores.component';
+import { HelperServiceComponent } from './components/helper-service/helper-service.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ColoresComponent } from './pages/colores/colores/colores.component';
     PadreColoresComponent,
     HijoColoresComponent,
     ColoresComponent,
+    HelperServiceComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,7 @@ import { ColoresComponent } from './pages/colores/colores/colores.component';
     ReactiveFormsModule,
     NgbModule
   ],
-  providers: [],
+  providers: [HelperServiceComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
