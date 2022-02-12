@@ -127,3 +127,50 @@ button {
   color: $white;
 }
 
+@media (max-width: 991px) {
+  .product {
+    left: 59%;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .container {
+    position: static;
+    transform: translateY(0%);
+    width: 95vw;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 2em;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  img {
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    display: block;
+  }
+
+  .product {
+    position: static;
+    width: 100%;
+  }
+
+  .add {
+    margin-bottom: 10px;
+  }
+
+  .colors {
+    width: 90%;
+  }
+
+
+}

@@ -8,8 +8,8 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class HelperServiceComponent {
 
+  // Las dos siguientes líneas son para comunicar padre (input del header) e hijo (componente items).
   private message = new BehaviorSubject<string>('');
-
   public customMessage = this.message.asObservable();
 
   constructor() { }

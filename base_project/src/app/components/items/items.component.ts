@@ -25,6 +25,7 @@ export class ItemsComponent implements OnInit {
     this.editMessage = ""
   }
 
+  // Con esto se 'suscribe' -> queda a la espera de que customMessage cambie en el helper, y entonces message cambiará aqui.
   ngOnInit(): void {
     this.helper.customMessage.subscribe(msg => this.message = msg);
   }
