@@ -1557,11 +1557,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/dani/Escritorio/PrimerProyecto/API/Api.csproj",
+      "projectUniqueName": "/home/dani/AngularApps/AngularBase/API/Api.csproj",
       "projectName": "Api",
-      "projectPath": "/home/dani/Escritorio/PrimerProyecto/API/Api.csproj",
+      "projectPath": "/home/dani/AngularApps/AngularBase/API/Api.csproj",
       "packagesPath": "/root/.nuget/packages/",
-      "outputPath": "/home/dani/Escritorio/PrimerProyecto/API/obj/",
+      "outputPath": "/home/dani/AngularApps/AngularBase/API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/root/.nuget/NuGet/NuGet.Config"

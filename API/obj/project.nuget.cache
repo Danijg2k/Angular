@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OraP5VotX/ZwLnCzrtpZFVqskcAvM9c8G85qNXth/pVcKzOp+4y8WguCgaSSCqpoAA2u472y57+tMfQuYTV8gQ==",
+  "dgSpecHash": "fbVVPI736OvKaqXC2AOEYI4bDuqXXDhd/wyzNG4G4czxXXYDG9YZj+ClE06sTgGGVLF3SWTt3CAnpvit1nkxxw==",
   "success": true,
-  "projectFilePath": "/home/dani/Escritorio/PrimerProyecto/API/Api.csproj",
+  "projectFilePath": "/home/dani/AngularApps/AngularBase/API/Api.csproj",
   "expectedPackageFiles": [
     "/root/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
     "/root/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.1/automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

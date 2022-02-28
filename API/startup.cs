@@ -12,20 +12,23 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddControllersWithViews();
-        services.AddSingleton<LibraryContext>(_ =>
-            new LibraryContext(Configuration.GetConnectionString("DefaultConnection")));
+        // services.AddSingleton<LibraryContext>(_ =>
+        //     new LibraryContext(Configuration.GetConnectionString("DefaultConnection")));
 
-
+        services.AddSingleton<AuctionContext>(_ =>
+            new AuctionContext(Configuration.GetConnectionString("DefaultConnection")));
 
         var mapperConfig = new MapperConfiguration(mc =>
         {
-            mc.AddProfile(new BookProfile());
+            // mc.AddProfile(new BookProfile());
+            mc.AddProfile(new ProductProfile());
         });
 
         IMapper mapper = mapperConfig.CreateMapper();
         services.AddSingleton(mapper);
 
-        services.AddSingleton<IBookService, BookService>();
+        // services.AddSingleton<IBookService, BookService>();
+        services.AddSingleton<IProductService, ProductService>();
 
     }
 

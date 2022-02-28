@@ -1,10 +1,10 @@
-public class BookDTO : BaseBookDTO
-{
-    public BookDTO()
-    {
+// public class BookDTO : BaseBookDTO
+// {
+//     public BookDTO()
+//     {
 
-    }
+//     }
 
 
-    public int Id { get; set; }
-}
+//     public int Id { get; set; }
+// }
