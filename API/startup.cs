@@ -20,15 +20,15 @@ public class Startup
 
         var mapperConfig = new MapperConfiguration(mc =>
         {
-            // mc.AddProfile(new BookProfile());
             mc.AddProfile(new ProductProfile());
+            mc.AddProfile(new BidProfile());
         });
 
         IMapper mapper = mapperConfig.CreateMapper();
         services.AddSingleton(mapper);
 
-        // services.AddSingleton<IBookService, BookService>();
         services.AddSingleton<IProductService, ProductService>();
+        services.AddSingleton<IBidService, BidService>();
 
     }
 
