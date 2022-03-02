@@ -1,0 +1,8 @@
+CREATE TABLE Product(
+Id INT IDENTITY(1,1),
+Name VARCHAR(100),
+Description VARCHAR(200),
+Image VARCHAR(MAX),
+Colors VARCHAR(MAX),
+CONSTRAINT pk_Product PRIMARY KEY (Id)
+);

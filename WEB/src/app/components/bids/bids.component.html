@@ -1,0 +1,16 @@
+<div class="album py-5" >
+  <div class="container" >
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-4 g-3" >
+      <!-- DIV DE PRODUCTO -> usamos ng-container porque necesitamos un div que no se muestre si no se cumple el if -->
+      <!-- Si usamos un div normal se generaría uno por cada elemento del for each (ocupando espacio), esto no nos interesa -->
+      <ng-container *ngFor="let bid of bids">
+
+          <p>{{ bid.id }}</p>
+          <p>{{ bid.price }}</p>
+          <p>{{ bid.idProducto }}</p>
+
+      </ng-container>
+      <!--  -->
+    </div>
+  </div>
+</div>

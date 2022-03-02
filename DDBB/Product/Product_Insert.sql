@@ -1,0 +1,8 @@
+INSERT INTO Product VALUES ('LONG SLEEVE FITTED HEART STRIPED TOP WITH LONG SLEEVE','Top ajustado de manga larga EXTRA LIFE, con tejido a rayas y detalle corazón central.','/assets/images/items/product1/blue.jpg','blue/lime/pink');
+INSERT INTO Product VALUES ('ARCHIVE EXTRA LIFE GREEN SKY HEARTS PANTS','Pantalón estilo sky EXTRA LIFE, con detalles de corazones y engomado trasero.','/assets/images/items/product2/yellow.jpg','black/blue/lime/pink/yellow');
+INSERT INTO Product VALUES ('STRIPED DRESS WITH SIDE HEART DETAIL','Vestido ajustado EXTRA LIFE, con tejido a rayas y detalle corazón lateral.','/assets/images/items/product3/lime.jpg','blue/lime/pink');
+INSERT INTO Product VALUES ('OMEGA RECYCLED FUR HEARTS COAT SPECIAL','Abrigo de pelo y piel reciclado con formas de corazón en coderas.','/assets/images/items/product4/pink.jpg','pink/white');
+INSERT INTO Product VALUES ('CROP TOP LONG SLEEVE HEART','Crop top EXTRA LIFE, con costuras exteriores y detalle de corazón central.','/assets/images/items/product5/black.jpg','black/lime/pink');
+INSERT INTO Product VALUES ('LAMINATED LEATHER TOP','Top de tirantes de cuero laminado.','/assets/images/items/product6/pink.jpg','blue/pink/purple');
+INSERT INTO Product VALUES ('BICOLOR SWEATSHIRT','Sudadera bicolor con el logo engomado en el centro delantero.','/assets/images/items/product7/white.jpg','blue/pink/white');
+INSERT INTO Product VALUES ('NEOPRENE BODY MUSCLES','Cuerpo de tul con estampado de músculos realizado junto a Unai LaFuente.','/assets/images/items/product8/tulle.jpg','green/tulle');

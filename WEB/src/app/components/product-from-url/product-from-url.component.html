@@ -14,11 +14,16 @@
     <p>Producto {{ producto?.id }}</p>
     <h1>{{ producto?.name }}</h1>
     <p class="desc">{{ producto?.description }}</p>
-    <h2>Puja más alta: {{ producto?.price }}€</h2>
-    <input class="form-control me-2" type="number" placeholder="Introduce puja" name="input" aria-label="Search" [(ngModel)]="bid"><br>
-    <div class="buttons">
-      <button class="add" (click)="guardarPuja()">Introduce tu puja</button>
-    </div>
+    <h2>Puja más alta: {{ maxBid }}€</h2>
+    <!-- Uso formGroup por si se introducen más campos en el futuro -->
+    <form [formGroup]="bidForm" (ngSubmit)="guardarPuja()">
+      <input class="form-control me-2" type="number" placeholder="Introduce puja"  aria-label="Search" formControlName="bidPrice"><br>
+
+      <div class="buttons">
+        <button class="add" type="submit">Introduce tu puja</button>
+      </div>
+    </form>
+    <!--  -->
   </div>
 </div>
 

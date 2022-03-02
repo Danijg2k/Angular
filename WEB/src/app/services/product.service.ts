@@ -20,7 +20,6 @@ export class ProductService {
     let bodyData = new Product();
     bodyData.name = body.name;
     bodyData.description = body.description;
-    bodyData.price = body.price;
     bodyData.image = body.image;
 
     let result = new Product();

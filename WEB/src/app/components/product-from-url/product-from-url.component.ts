@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { NgModel } from '@angular/forms';
+import { FormBuilder, NgModel, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { Bid } from 'src/app/models/bid.model';
 import { Product } from 'src/app/models/product.model';
+import { BidService } from 'src/app/services/bid.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -12,15 +14,26 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductFromUrlComponent implements OnInit {
   producto: Product | null;
   idProducto: number;
+
   bid: number;
+  maxBid: number;
+  bids: Bid[] | null;
+
+  bidForm = this.fb.group({
+    bidPrice: ['', Validators.required],
+  });
 
   constructor(
+    private fb: FormBuilder,
     private activatedRoute: ActivatedRoute,
-    private _productService: ProductService
+    private _productService: ProductService,
+    private _bidService: BidService
   ) {
     this.producto = null;
     this.idProducto = 0;
     this.bid = 0;
+    this.maxBid = 0;
+    this.bids = null;
   }
 
   ngOnInit(): void {
@@ -32,9 +45,11 @@ export class ProductFromUrlComponent implements OnInit {
     //   (x: Product) => x.id == this.idProducto
     // )[0];
 
-    this._productService
-      .getIdProductData(this.idProducto)
-      .subscribe((apiProduct) => (this.producto = apiProduct));
+    // this._productService
+    //   .getIdProductData(this.idProducto)
+    //   .subscribe((apiProduct) => (this.producto = apiProduct));
+
+    // this._bidService.getBidData().subscribe((apiBid) => (this.bids = apiBid));
   }
 
   changeImg(color: string) {
@@ -48,5 +63,13 @@ export class ProductFromUrlComponent implements OnInit {
     }
   }
 
-  guardarPuja() {}
+  guardarPuja() {
+    this._bidService.postBidData(this.idProducto, this.bidForm.value);
+    alert(
+      'Has pujado ' +
+        this.bidForm.value.bidPrice +
+        ' € por el producto ' +
+        this.idProducto
+    );
+  }
 }

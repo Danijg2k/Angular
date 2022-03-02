@@ -4,6 +4,7 @@ import { PageNotFoundComponent } from '../page-not-found/page-not-found.componen
 import { IndexComponentComponent } from '../../pages/index/index-component/index-component.component';
 import { ProductFromUrlComponent } from '../product-from-url/product-from-url.component';
 import { ColoresComponent } from 'src/app/pages/colores/colores/colores.component';
+import { BidsComponent } from '../bids/bids.component';
 
 const routes: Routes = [
   {
@@ -15,17 +16,21 @@ const routes: Routes = [
     component: ColoresComponent,
   },
   {
+    path: 'bids',
+    component: BidsComponent,
+  },
+  {
     path: 'productos/:idProducto',
     component: ProductFromUrlComponent,
   },
   {
     path: '**',
     component: PageNotFoundComponent,
-  }
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

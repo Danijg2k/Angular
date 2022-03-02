@@ -20,6 +20,8 @@ import { ColoresComponent } from './pages/colores/colores/colores.component';
 import { HelperServiceComponent } from './components/helper-service/helper-service.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductService } from './services/product.service';
+import { BidsComponent } from './components/bids/bids.component';
+import { BidService } from './services/bid.service';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { ProductService } from './services/product.service';
     HijoColoresComponent,
     ColoresComponent,
     HelperServiceComponent,
+    BidsComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,7 @@ import { ProductService } from './services/product.service';
     NgbModule,
     HttpClientModule,
   ],
-  providers: [HelperServiceComponent, ProductService],
+  providers: [HelperServiceComponent, ProductService, BidService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,0 +1,7 @@
+CREATE TABLE Bid(
+Id INT IDENTITY(1,1),
+Price INT,
+IdProducto INT,
+CONSTRAINT pk_Bid PRIMARY KEY (Id),
+CONSTRAINT fk_Product_Bid FOREIGN KEY (IdProducto) REFERENCES Product(Id)
+);
