@@ -33,7 +33,5 @@ export class ItemsComponent implements OnInit {
     this._productService
       .getProductData()
       .subscribe((apiProducts) => (this.productos = apiProducts));
-
-    console.log('jaja');
   }
 }

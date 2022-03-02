@@ -4,7 +4,7 @@ export class Product {
   description: string | null;
   price: number | null;
   image: string | null;
-  colors: string[];
+  colors: string | null;
 
   constructor() {
     this.id = 0;
@@ -12,6 +12,6 @@ export class Product {
     this.description = null;
     this.price = 0;
     this.image = null;
-    this.colors = [];
+    this.colors = null;
   }
 }

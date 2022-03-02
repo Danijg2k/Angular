@@ -5,5 +5,5 @@ public class BaseProductDTO
     public int Price { get; set; }
     public string Image { get; set; }
     // public DateTime? PublishDate { get; set; }
-    public string[] Colors { get; set; }
+    public string Colors { get; set; }
 }

@@ -11,7 +11,7 @@ public class ProductEntity
     public string Description { get; set; }
     public int Price { get; set; }
     public string Image { get; set; }
-    public string[] Colors { get; set; }
+    public string Colors { get; set; }
     public int Id { get; set; }
 
 }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NgModel } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/models/product.model';
-import { PRODUCTOS } from 'src/app/utils/productos';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-product-from-url',
@@ -11,12 +12,15 @@ import { PRODUCTOS } from 'src/app/utils/productos';
 export class ProductFromUrlComponent implements OnInit {
   producto: Product | null;
   idProducto: number;
-  actualImage: string | null;
+  bid: number;
 
-  constructor(private activatedRoute: ActivatedRoute) {
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private _productService: ProductService
+  ) {
     this.producto = null;
     this.idProducto = 0;
-    this.actualImage = '';
+    this.bid = 0;
   }
 
   ngOnInit(): void {
@@ -24,16 +28,18 @@ export class ProductFromUrlComponent implements OnInit {
       this.idProducto = parameters.get('idProducto');
     });
 
-    this.producto = PRODUCTOS.filter(
-      (x: Product) => x.id == this.idProducto
-    )[0];
+    // this.producto = PRODUCTOS.filter(
+    //   (x: Product) => x.id == this.idProducto
+    // )[0];
 
-    this.actualImage = this.producto.image;
+    this._productService
+      .getIdProductData(this.idProducto)
+      .subscribe((apiProduct) => (this.producto = apiProduct));
   }
 
   changeImg(color: string) {
     if (this.producto != null) {
-      this.actualImage =
+      this.producto.image =
         '/assets/images/items/product' +
         this.producto.id +
         '/' +
@@ -41,4 +47,6 @@ export class ProductFromUrlComponent implements OnInit {
         '.jpg';
     }
   }
+
+  guardarPuja() {}
 }

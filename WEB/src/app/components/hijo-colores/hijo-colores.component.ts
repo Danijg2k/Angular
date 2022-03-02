@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/models/product.model';
-import { PRODUCTOS } from 'src/app/utils/productos';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-hijo-colores',
@@ -14,15 +14,19 @@ export class HijoColoresComponent implements OnInit {
   // HIJO A PADRE
   @Output() emitItemEvent = new EventEmitter<number>();
 
-  productos: Product[];
+  productos: Product[] | null;
 
-  constructor() {
-    this.productos = PRODUCTOS;
+  constructor(private _productService: ProductService) {
+    this.productos = null;
   }
 
   emitValue(num: number) {
     this.emitItemEvent.emit(num);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this._productService
+      .getProductData()
+      .subscribe((apiProducts) => (this.productos = apiProducts));
+  }
 }

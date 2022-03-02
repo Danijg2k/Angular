@@ -3,20 +3,21 @@
 <!-- Contenedor con el producto y los detalles -->
 <div class="container">
   <div class="images">
-    <img [src]="actualImage" />
+    <img src="{{ producto?.image }}" />
   </div>
   <p class="pick">Choose color</p>
   <div class="colors">
     <!-- Un botón para cada color de artículo (dinámicamente) -->
-    <button type="button" class="color" (click)="changeImg(color)" *ngFor="let color of producto?.colors">{{ color }}</button>
+    <button type="button" class="color" (click)="changeImg(color)" *ngFor="let color of producto?.colors?.split('/')">{{ color }}</button>
   </div>
   <div class="product">
     <p>Producto {{ producto?.id }}</p>
     <h1>{{ producto?.name }}</h1>
-    <h2>Puja inicial: {{ producto?.price }}€</h2>
     <p class="desc">{{ producto?.description }}</p>
+    <h2>Puja más alta: {{ producto?.price }}€</h2>
+    <input class="form-control me-2" type="number" placeholder="Introduce puja" name="input" aria-label="Search" [(ngModel)]="bid"><br>
     <div class="buttons">
-      <button class="add">Introduce tu puja</button>
+      <button class="add" (click)="guardarPuja()">Introduce tu puja</button>
     </div>
   </div>
 </div>
