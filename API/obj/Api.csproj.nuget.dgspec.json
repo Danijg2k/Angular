@@ -10,11 +10,11 @@
         "projectUniqueName": "/home/dani/AngularApps/AngularBase/API/Api.csproj",
         "projectName": "Api",
         "projectPath": "/home/dani/AngularApps/AngularBase/API/Api.csproj",
-        "packagesPath": "/root/.nuget/packages/",
+        "packagesPath": "/home/dani/.nuget/packages/",
         "outputPath": "/home/dani/AngularApps/AngularBase/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/root/.nuget/NuGet/NuGet.Config"
+          "/home/dani/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"

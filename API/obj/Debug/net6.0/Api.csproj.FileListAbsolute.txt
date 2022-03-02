@@ -106,3 +106,4 @@
 /home/dani/AngularApps/AngularBase/API/obj/Debug/net6.0/Api.pdb
 /home/dani/AngularApps/AngularBase/API/obj/Debug/net6.0/Api.genruntimeconfig.cache
 /home/dani/AngularApps/AngularBase/API/obj/Debug/net6.0/ref/Api.dll
+/home/dani/AngularApps/AngularBase/API/bin/Debug/net6.0/package-lock.json

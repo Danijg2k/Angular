@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 // Needed for changing styles via css
 import { ViewEncapsulation } from '@angular/core';
 import { Product } from 'src/app/models/product.model';
-import { PRODUCTOS } from 'src/app/utils/productos';
+import { ProductService } from 'src/app/services/product.service';
 import { HelperServiceComponent } from '../helper-service/helper-service.component';
 
 @Component({
@@ -13,13 +13,16 @@ import { HelperServiceComponent } from '../helper-service/helper-service.compone
   styleUrls: ['./items.component.css'],
 })
 export class ItemsComponent implements OnInit {
-  productos: Product[];
+  productos: Product[] | null;
 
   message: string;
   editMessage: string;
 
-  constructor(private helper: HelperServiceComponent) {
-    this.productos = PRODUCTOS;
+  constructor(
+    private helper: HelperServiceComponent,
+    private _productService: ProductService
+  ) {
+    this.productos = null;
     this.message = '';
     this.editMessage = '';
   }
@@ -27,5 +30,10 @@ export class ItemsComponent implements OnInit {
   // Con esto se 'suscribe' -> queda a la espera de que customMessage cambie en el helper, y entonces message cambiará aqui.
   ngOnInit(): void {
     this.helper.customMessage.subscribe((msg) => (this.message = msg));
+    this._productService
+      .getProductData()
+      .subscribe((apiProducts) => (this.productos = apiProducts));
+
+    console.log('jaja');
   }
 }

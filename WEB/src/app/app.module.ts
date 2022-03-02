@@ -18,6 +18,8 @@ import { PadreColoresComponent } from './components/padre-colores/padre-colores.
 import { HijoColoresComponent } from './components/hijo-colores/hijo-colores.component';
 import { ColoresComponent } from './pages/colores/colores/colores.component';
 import { HelperServiceComponent } from './components/helper-service/helper-service.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductService } from './services/product.service';
 
 @NgModule({
   declarations: [
@@ -41,9 +43,10 @@ import { HelperServiceComponent } from './components/helper-service/helper-servi
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
   ],
-  providers: [HelperServiceComponent],
-  bootstrap: [AppComponent]
+  providers: [HelperServiceComponent, ProductService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

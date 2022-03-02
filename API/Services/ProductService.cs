@@ -41,6 +41,8 @@ public class ProductService : IProductService
         return _mapper.Map<ProductDTO>(_context.Products.FirstOrDefault(x => x.Id == guid));
     }
 
+
+
     public ProductDTO Modify(BaseProductDTO product, int guid)
     {
         var _mappedProduct = _mapper.Map<ProductEntity>(product);

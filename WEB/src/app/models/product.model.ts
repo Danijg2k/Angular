@@ -1,17 +1,17 @@
 export class Product {
-  productId: number;
-  nombre: string | null;
-  descripcion: string | null;
-  precio: number | null;
-  url: string | null;
-  colores: string[];
+  id: number;
+  name: string | null;
+  description: string | null;
+  price: number | null;
+  image: string | null;
+  colors: string[];
 
   constructor() {
-    this.productId = 0;
-    this.nombre = null;
-    this.descripcion = null;
-    this.precio = 0;
-    this.url = null;
-    this.colores = [];
+    this.id = 0;
+    this.name = null;
+    this.description = null;
+    this.price = 0;
+    this.image = null;
+    this.colors = [];
   }
 }

@@ -9,25 +9,28 @@ export class ProductService {
   constructor(private http: HttpClient) {}
 
   getProductData(): Observable<Product[]> {
-    return this.http.get<Product[]>(environment.API_URL + 'books');
+    return this.http.get<Product[]>(environment.API_URL + 'products');
   }
 
   postProductData(body: any): Product {
     let bodyData = new Product();
-    bodyData.nombre = body.bookIsbn;
-    bodyData.descripcion = body.bookName;
-    bodyData.precio = body.bookPages;
+    bodyData.name = body.name;
+    bodyData.description = body.description;
+    bodyData.price = body.price;
+    bodyData.image = body.image;
 
     let result = new Product();
-    this.http.post<Product>(environment.API_URL + 'books', bodyData).subscribe(
-      (response) => {
-        console.log('response received');
-        result = response;
-      },
-      (error) => {
-        console.error('error caught in component');
-      }
-    );
+    this.http
+      .post<Product>(environment.API_URL + 'products', bodyData)
+      .subscribe(
+        (response) => {
+          console.log('response received');
+          result = response;
+        },
+        (error) => {
+          console.error('error caught in component');
+        }
+      );
     return result;
   }
 }

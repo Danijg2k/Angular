@@ -25,17 +25,17 @@ export class ProductFromUrlComponent implements OnInit {
     });
 
     this.producto = PRODUCTOS.filter(
-      (x: Product) => x.productId == this.idProducto
+      (x: Product) => x.id == this.idProducto
     )[0];
 
-    this.actualImage = this.producto.url;
+    this.actualImage = this.producto.image;
   }
 
   changeImg(color: string) {
     if (this.producto != null) {
       this.actualImage =
         '/assets/images/items/product' +
-        this.producto.productId +
+        this.producto.id +
         '/' +
         color +
         '.jpg';
