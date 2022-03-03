@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.JsonPatch;
 
 public class BidService : IBidService
 {
-    private readonly AuctionContext _context;
+    private readonly BidContext _context;
     private readonly IMapper _mapper;
 
-    public BidService(AuctionContext context, IMapper mapper)
+    public BidService(BidContext context, IMapper mapper)
     {
         _context = context;
         _mapper = mapper;

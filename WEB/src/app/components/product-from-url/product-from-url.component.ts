@@ -14,8 +14,6 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductFromUrlComponent implements OnInit {
   producto: Product | null;
   idProducto: number;
-
-  bid: number;
   maxBid: number;
   bids: Bid[] | null;
 
@@ -31,7 +29,6 @@ export class ProductFromUrlComponent implements OnInit {
   ) {
     this.producto = null;
     this.idProducto = 0;
-    this.bid = 0;
     this.maxBid = 0;
     this.bids = null;
   }
@@ -45,11 +42,11 @@ export class ProductFromUrlComponent implements OnInit {
     //   (x: Product) => x.id == this.idProducto
     // )[0];
 
-    // this._productService
-    //   .getIdProductData(this.idProducto)
-    //   .subscribe((apiProduct) => (this.producto = apiProduct));
+    this._productService
+      .getIdProductData(this.idProducto)
+      .subscribe((apiProduct) => (this.producto = apiProduct));
 
-    // this._bidService.getBidData().subscribe((apiBid) => (this.bids = apiBid));
+    this._bidService.getBidData().subscribe((apiBid) => (this.bids = apiBid));
   }
 
   changeImg(color: string) {

@@ -18,6 +18,9 @@ public class Startup
         services.AddSingleton<AuctionContext>(_ =>
             new AuctionContext(Configuration.GetConnectionString("DefaultConnection")));
 
+        services.AddSingleton<BidContext>(_ =>
+            new BidContext(Configuration.GetConnectionString("DefaultConnection")));
+
         var mapperConfig = new MapperConfiguration(mc =>
         {
             mc.AddProfile(new ProductProfile());
