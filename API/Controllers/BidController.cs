@@ -23,6 +23,17 @@ public class BidsController : ControllerBase
         return Ok(_bidService.GetAll());
     }
 
+
+    [HttpGet("product{IdProd}")]
+    // [Route("product{IdProd}")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(BidDTO))]
+    public ActionResult<BidDTO> GetOfProduct(int IdProd)
+    {
+        return Ok(_bidService.GetAllOfProduct(IdProd));
+    }
+
+
+
     [HttpGet("{Id}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(BidDTO))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]

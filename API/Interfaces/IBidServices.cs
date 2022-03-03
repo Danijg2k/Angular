@@ -5,6 +5,9 @@ public interface IBidService
 {
     public IEnumerable<BidDTO> GetAll();
 
+    // Devuelve todas las pujas hechas sobre un producto específico (aportamos Id)
+    public IEnumerable<BidDTO> GetAllOfProduct(int guid);
+
     public BidDTO GetByID(int guid);
 
     public BidDTO Add(BaseBidDTO guid);

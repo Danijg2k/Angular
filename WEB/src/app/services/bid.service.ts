@@ -8,12 +8,19 @@ import { Bid } from '../models/bid.model';
 export class BidService {
   constructor(private http: HttpClient) {}
 
+  // Get all
   getBidData(): Observable<Bid[]> {
     return this.http.get<Bid[]>(environment.API_URL + 'bids');
   }
 
+  // Get by Id
   getIdBidData(id: number): Observable<Bid> {
     return this.http.get<Bid>(environment.API_URL + 'bids/' + id);
+  }
+
+  // Get all del producto actual
+  getProductBidData(id: number): Observable<Bid[]> {
+    return this.http.get<Bid[]>(environment.API_URL + 'bids/product' + id);
   }
 
   getMaxBid(): Observable<Bid[]> {

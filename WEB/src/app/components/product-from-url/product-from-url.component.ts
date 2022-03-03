@@ -14,8 +14,11 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductFromUrlComponent implements OnInit {
   producto: Product | null;
   idProducto: number;
-  maxBid: number;
+
+  maxBid: number | null;
   bids: Bid[] | null;
+
+  frase: string;
 
   bidForm = this.fb.group({
     bidPrice: ['', Validators.required],
@@ -31,6 +34,7 @@ export class ProductFromUrlComponent implements OnInit {
     this.idProducto = 0;
     this.maxBid = 0;
     this.bids = null;
+    this.frase = '';
   }
 
   ngOnInit(): void {
@@ -46,7 +50,9 @@ export class ProductFromUrlComponent implements OnInit {
       .getIdProductData(this.idProducto)
       .subscribe((apiProduct) => (this.producto = apiProduct));
 
-    this._bidService.getBidData().subscribe((apiBid) => (this.bids = apiBid));
+    this._bidService
+      .getProductBidData(this.idProducto)
+      .subscribe((apiBid) => (this.bids = apiBid) && this.updateMax());
   }
 
   changeImg(color: string) {
@@ -61,12 +67,35 @@ export class ProductFromUrlComponent implements OnInit {
   }
 
   guardarPuja() {
-    this._bidService.postBidData(this.idProducto, this.bidForm.value);
-    alert(
-      'Has pujado ' +
-        this.bidForm.value.bidPrice +
-        ' € por el producto ' +
-        this.idProducto
-    );
+    if (this.bidForm.value.bidPrice == '') {
+      this.frase = 'Introduce un valor en el input.';
+      // alert('Introduce un valor en el input.');
+      return;
+    }
+    if (this.maxBid != null) {
+      if (this.bidForm.value.bidPrice < this.maxBid) {
+        this.frase = 'Cantidad mínima debe ser: ' + this.maxBid + '€.';
+        // alert('La cantidad mínima a introducir es: ' + this.maxBid);
+        return;
+      }
+      alert('Has pujado por ' + this.bidForm.value + '€.');
+      this._bidService.postBidData(this.idProducto, this.bidForm.value);
+      // Recargamos la página
+      window.location.reload();
+    }
+  }
+
+  updateMax() {
+    if (this.bids != null) {
+      this.bids.forEach((element) => {
+        if (
+          element.price != null &&
+          this.maxBid != null &&
+          element.price > this.maxBid
+        ) {
+          this.maxBid = element.price;
+        }
+      });
+    }
   }
 }

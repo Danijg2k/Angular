@@ -41,7 +41,10 @@ public class BidService : IBidService
         return _mapper.Map<BidDTO>(_context.Bids.FirstOrDefault(x => x.Id == guid));
     }
 
-
+    public IEnumerable<BidDTO> GetAllOfProduct(int guid)
+    {
+        return _mapper.Map<IEnumerable<BidDTO>>(_context.Bids.Where(x => x.IdProducto == guid));
+    }
 
     public BidDTO Modify(BaseBidDTO bid, int guid)
     {
