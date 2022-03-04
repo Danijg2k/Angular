@@ -18,8 +18,8 @@ public class Startup
         services.AddSingleton<ProductContext>(_ =>
             new ProductContext(Configuration.GetConnectionString("DefaultConnection")));
 
-        services.AddSingleton<BidContext>(_ =>
-            new BidContext(Configuration.GetConnectionString("DefaultConnection")));
+        // services.AddSingleton<BidContext>(_ =>
+        //     new BidContext(Configuration.GetConnectionString("DefaultConnection")));
 
         var mapperConfig = new MapperConfiguration(mc =>
         {
