@@ -15,7 +15,7 @@ public class Startup
         // services.AddSingleton<LibraryContext>(_ =>
         //     new LibraryContext(Configuration.GetConnectionString("DefaultConnection")));
 
-        services.AddSingleton<ProductContext>(_ =>
+        services.AddTransient<ProductContext>(_ =>
             new ProductContext(Configuration.GetConnectionString("DefaultConnection")));
 
         // services.AddSingleton<BidContext>(_ =>
