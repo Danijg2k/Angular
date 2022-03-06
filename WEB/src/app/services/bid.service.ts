@@ -23,9 +23,9 @@ export class BidService {
     return this.http.get<Bid[]>(environment.API_URL + 'bids/product' + id);
   }
 
-  getMaxBid(): Observable<Bid[]> {
-    return this.http.get<Bid[]>(environment.API_URL + 'bids');
-  }
+  // getMaxBid(): Observable<Bid[]> {
+  //   return this.http.get<Bid[]>(environment.API_URL + 'bids');
+  // }
 
   postBidData(productId: number, body: any): Bid {
     let bodyData = new Bid();

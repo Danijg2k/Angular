@@ -16,6 +16,9 @@
     <p class="desc">{{ producto?.description }}</p>
     <h2>Puja más alta: {{ maxBid }}€</h2>
     <!-- Uso formGroup por si se introducen más campos en el futuro -->
+
+
+
     <form [formGroup]="bidForm" (ngSubmit)="guardarPuja()">
       <input class="form-control me-2" type="number" placeholder="Introduce puja"  aria-label="Search" formControlName="bidPrice"><br>
 
@@ -23,6 +26,9 @@
         <button class="add" type="submit">Introduce tu puja</button>
       </div>
     </form>
+
+
+
     <!--  -->
     <br>
     <p class="desc">{{ frase }}</p>

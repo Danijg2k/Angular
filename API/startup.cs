@@ -12,14 +12,11 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddControllersWithViews();
-        // services.AddSingleton<LibraryContext>(_ =>
-        //     new LibraryContext(Configuration.GetConnectionString("DefaultConnection")));
 
-        services.AddSingleton<ProductContext>(_ =>
-            new ProductContext(Configuration.GetConnectionString("DefaultConnection")));
+        // Para utilizar un solo context sin problemas cambiamos -> 'AddSingleton' por 'AddTransient' en la siguiente línea
+        services.AddTransient<AuctionContext>(_ =>
+            new AuctionContext(Configuration.GetConnectionString("DefaultConnection")));
 
-        // services.AddSingleton<BidContext>(_ =>
-        //     new BidContext(Configuration.GetConnectionString("DefaultConnection")));
 
         var mapperConfig = new MapperConfiguration(mc =>
         {

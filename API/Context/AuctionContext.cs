@@ -1,8 +1,8 @@
 using System.Data.Entity;
 
-public class ProductContext : DbContext
+public class AuctionContext : DbContext
 {
-    public ProductContext(string connectionString) : base(connectionString)
+    public AuctionContext(string connectionString) : base(connectionString)
     { }
     public DbSet<ProductEntity> Products { get; set; }
     public DbSet<BidEntity> Bids { get; set; }

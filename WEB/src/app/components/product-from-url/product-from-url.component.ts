@@ -42,10 +42,6 @@ export class ProductFromUrlComponent implements OnInit {
       this.idProducto = parameters.get('idProducto');
     });
 
-    // this.producto = PRODUCTOS.filter(
-    //   (x: Product) => x.id == this.idProducto
-    // )[0];
-
     this._productService
       .getIdProductData(this.idProducto)
       .subscribe((apiProduct) => (this.producto = apiProduct));
@@ -78,7 +74,7 @@ export class ProductFromUrlComponent implements OnInit {
         // alert('La cantidad mínima a introducir es: ' + this.maxBid);
         return;
       }
-      alert('Has pujado por ' + this.bidForm.value + '€.');
+      //alert('Has pujado por ' + this.bidForm.value.bidPrice + '€.');
       this._bidService.postBidData(this.idProducto, this.bidForm.value);
       // Recargamos la página
       window.location.reload();

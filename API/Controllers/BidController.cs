@@ -25,7 +25,7 @@ public class BidsController : ControllerBase
 
 
     [HttpGet("product{IdProd}")]
-    // [Route("product{IdProd}")]
+
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(BidDTO))]
     public ActionResult<BidDTO> GetOfProduct(int IdProd)
     {
