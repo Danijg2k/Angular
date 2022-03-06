@@ -18,6 +18,7 @@ public class Startup
             new AuctionContext(Configuration.GetConnectionString("DefaultConnection")));
 
 
+
         var mapperConfig = new MapperConfiguration(mc =>
         {
             mc.AddProfile(new ProductProfile());
